@@ -7,6 +7,24 @@
   </head>
   <body>
     <h2>HomePage</h2>
-    <Script> document.cookie = "email=Trần Quốc Khánh; "; </Script>
+    <Script> document.cookie = "email=Trần Quốc Khánh; path=/bai-viet";
+    // dấu chấm để đầu domain sẽ áp dụng cho tất cả các subdomain
+    // dấu gạch chéo để áp dụng cho tất cả các đường dẫn con
+    //  ví dụ: document.cookie = "email=Trần Quốc Khánh; path=/bai-viet ";
+    // document.cookie = "email=Trần Quốc Khánh; path=/bai-viet ";  áp dụng cho tất cả các đường dẫn con của /bai-viet
+    // document.cookie = "email=Trần Quốc Khánh; path=/ "; áp dụng cho tất cả các đường dẫn con của trang web
+    // document.cookie = "email=Trần Quốc Khánh; path=/; domain=.localhost "; áp dụng cho tất cả các subdomain của localhost
+    // document.cookie = "email=Trần Quốc Khánh; path=/; domain=.localhost:3000 "; áp dụng cho tất cả các subdomain của localhost:3000
+    // document.cookie = "email=Trần Quốc Khánh; path=/; domain=localhost "; áp dụng cho localhost
+   // expires: để thiết lập thời gian hết hạn của cookie
+   // document.cookie = "email=Trần Quốc Khánh; path=/; domain=.localhost; expires=Fri, 31 Dec 2024 23:59:59 GMT ";
+   // max-age: để thiết lập thời gian sống của cookie (tính bằng giây
+    // document.cookie = "email=Trần Quốc Khánh; path=/; domain=.localhost; max-age=3600 "; // cookie sẽ tồn tại trong 1 giờ
+
+    //localhost: là thay vì đi ra mạng ngoài thì nó quay lại chính máy tính của mình  (mạng loopback)
+    // http : giữa các request thì nó hoạt động độc lập không liên quan đến nhau nên ta dùng cookie để lưu trữ thông tin
+    // cookie là một đoạn văn bản nhỏ được lưu trữ trên trình duyệt của người dùng
+    // cookie được gửi kèm theo mỗi yêu cầu HTTP đến máy chủ    
+    </Script>
   </body>
 </html>

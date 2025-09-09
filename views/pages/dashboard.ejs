@@ -7,5 +7,11 @@
   </head>
   <body>
     <h1>Welcome to the Dashboard</h1>
+    <% if (user) { %>
+    <p>xin chào , <%= user.name %>!</p>
+    <% } else { %>
+    <p>Please log in to access your dashboard.</p>
+
+    <a href="/logout">Logout</a>
   </body>
 </html>
